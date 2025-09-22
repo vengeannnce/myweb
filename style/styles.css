@@ -98,13 +98,14 @@ body {
 }
 
 .about-me {
-    background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+    background: #d3d3d3;
     padding: 25px;
     border-radius: 15px;
     margin: 30px 0;
     border-left: 5px solid #ffcc00;
     font-size: 16px;
     line-height: 1.8;
+    color: #333333;
 }
 
 .skills-container {
@@ -250,12 +251,12 @@ body {
 }
 
 .contact-info {
-    background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+    background: #d3d3d3; /* Светло-серый фон */
     padding: 25px;
     margin: 20px 0;
     border-radius: 15px;
     font-size: 18px;
-    color: #ffcc00;
+    color: #333333;
 }
 
 .contact-button {
