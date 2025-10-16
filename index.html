@@ -3,160 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Портфолио - Дудаев Азамат</title>
+<title>Главная - Портфолио</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <style>
 body {
-    background: #111;
-    color: #ffcc00;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-header {
-    background: #000;
-    text-align: center;
-    padding: 15px 0;
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-.navbar {
-    background: #111;
-}
-.nav-link {
-    color: #ffcc00 !important;
-    font-weight: 500;
-    margin-right: 15px;
-}
-.nav-link.active {
-    text-decoration: underline;
-}
-.main-container {
-    padding: 30px 15px;
-}
-.profile-card {
-    background: #222;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    margin-bottom: 30px;
-}
-.profile-card img {
-    width: 150px;
-    border-radius: 12px;
-    border: 3px solid #ffcc00;
-}
-.resume-btn {
-    background: #ffcc00;
+    background-color: #f8f9fa;
     color: #111;
-    font-weight: 600;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin-top: 10px;
 }
-.skills, .projects {
-    margin-bottom: 30px;
+.card-header {
+    background-color: #e9ecef;
 }
 .progress {
-    height: 20px;
-    background: #333;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    height: 8px;
 }
-.progress-bar {
-    background: #ffcc00;
-    font-weight: 600;
-    text-align: right;
-    padding-right: 5px;
-}
-.project-card {
-    background: #222;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    color: #ffcc00;
-    font-weight: 600;
-}
-footer {
-    background: #000;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+.card-img-top {
+    object-fit: cover;
 }
 </style>
 </head>
 <body>
 
-<header>
-    <div>[ЛОГОТИП]</div>
-    <div>Дудаев Азамат Альбертович</div>
+<div class="container-fluid p-0">
+
+<!-- Header -->
+<header class="bg-primary text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <h1 class="h3 mb-1">Дудаев Азамат</h1>
+            <p class="mb-0 opacity-75">Студент разработчик</p>
+        </div>
+        <div>
+            <span class="badge bg-light text-primary">ЭФБО-16-24</span>
+        </div>
+    </div>
 </header>
 
-<nav class="navbar navbar-expand-lg">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <div class="collapse navbar-collapse">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Проекты</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Дневник</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house me-1"></i>Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/news.html"><i class="bi bi-newspaper me-1"></i>Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/goods.html"><i class="bi bi-cart me-1"></i>Ништяки</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/contacts.html"><i class="bi bi-telephone me-1"></i>Контакты</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container main-container">
+<!-- Main Content -->
+<main class="container my-4">
 
-    <!-- Профиль -->
-    <div class="profile-card">
-        <img src="images/photo.png" alt="Фото студента">
+    <!-- Profile Section -->
+    <section class="mb-5">
+        <div class="card shadow-sm">
+            <div class="card-body p-4 d-flex flex-wrap align-items-center">
+                <div class="me-4 mb-3">
+                    <img src="images/photo.png" alt="Фото студента" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+                </div>
+                <div>
+                    <h2 class="card-title h4">Дудаев Азамат Альбертович</h2>
+                    <p class="mb-1"><i class="bi bi-bookmark-check-fill"></i> Студент группы ЭФБО-16-24</p>
+                    <p>Факультет информационных технологий, специальность "Веб-разработка"</p>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                        <span class="badge bg-primary">HTML/CSS</span>
+                        <span class="badge bg-success">JavaScript</span>
+                        <span class="badge bg-info">Bootstrap</span>
+                        <span class="badge bg-warning text-dark">React</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="mb-5">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h3 class="card-title h5 mb-0"><i class="bi bi-person-circle text-primary"></i> Обо мне</h3>
+            </div>
+            <div class="card-body">
+                <p>Я увлекаюсь веб-разработкой и изучаю современные технологии. В свободное время занимаюсь созданием пет-проектов и изучаю новые фреймворки.</p>
+                <p>Мои основные интересы: фронтенд разработка, UX/UI дизайн и мобильная разработка. Стремлюсь к созданию качественных и удобных пользовательских интерфейсов.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="mb-5">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h3 class="card-title h5 mb-0"><i class="bi bi-tools text-primary"></i> Мои навыки</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>HTML/CSS</span><span class="text-primary">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>JavaScript</span><span class="text-success">75%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Bootstrap</span><span class="text-info">85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>React</span><span class="text-warning">70%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning text-dark" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="mb-5">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h3 class="card-title h5 mb-0"><i class="bi bi-folder-fill text-primary"></i> Мои проекты</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="images/project1.jpg" class="card-img-top" alt="Личный сайт" style="height:150px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Личный сайт</h5>
+                                <p class="card-text small text-muted">Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-primary">HTML</span>
+                                    <span class="badge bg-primary">CSS</span>
+                                    <span class="badge bg-info">Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="images/project2.jpg" class="card-img-top" alt="Todo приложение" style="height:150px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Todo приложение</h5>
+                                <p class="card-text small text-muted">Приложение для управления задачами с использованием JavaScript.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-success">JavaScript</span>
+                                    <span class="badge bg-success">LocalStorage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="images/project3.jpg" class="card-img-top" alt="Интернет-магазин" style="height:150px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Интернет-магазин</h5>
+                                <p class="card-text small text-muted">Прототип интернет-магазина с корзиной товаров и фильтрацией.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-info">React</span>
+                                    <span class="badge bg-info">API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container d-flex justify-content-between">
+        <p class="mb-0">&copy; 2025 Портфолио студента. Все права защищены.</p>
         <div>
-            <p>Привет! Я студент группы ЭФБО-16-24</p>
-            <p>Увлекаюсь веб-разработкой</p>
-            <button class="resume-btn">Скачать резюме</button>
+            <a href="pages/contacts.html" class="text-white me-3">Контакты</a>
+            <a href="#" class="text-white">Политика конфиденциальности</a>
         </div>
     </div>
-
-    <!-- Навыки -->
-    <div class="skills">
-        <h3>Мои навыки</h3>
-        <div>HTML/CSS
-            <div class="progress"><div class="progress-bar" style="width:90%">90%</div></div>
-        </div>
-        <div>JavaScript
-            <div class="progress"><div class="progress-bar" style="width:80%">80%</div></div>
-        </div>
-        <div>Bootstrap
-            <div class="progress"><div class="progress-bar" style="width:85%">85%</div></div>
-        </div>
-        <div>React
-            <div class="progress"><div class="progress-bar" style="width:60%">60%</div></div>
-        </div>
-    </div>
-
-    <!-- Проекты -->
-    <div class="projects">
-        <h3>Лучшие проекты</h3>
-        <div class="row g-3">
-            <div class="col-md-4">
-                <div class="project-card">П1</div>
-            </div>
-            <div class="col-md-4">
-                <div class="project-card">П2</div>
-            </div>
-            <div class="col-md-4">
-                <div class="project-card">П3</div>
-            </div>
-        </div>
-    </div>
+</footer>
 
 </div>
-
-<footer>
-    &copy; 2025 Контакты
-</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
