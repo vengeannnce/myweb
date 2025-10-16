@@ -3,56 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Контакты</title>
+<title>Контакты - Дудаев Азамат</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="../style/styles.css">
 </head>
-<body>
-<div class="page-container">
-    <div class="header">Верхушка</div>
-    <div class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li> 
-            <li class="nav-item"><a class="nav-link" href="goods.html">Ништяки</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-        </ul>
+<body class="bg-dark text-yellow">
+
+<div class="container-fluid p-0">
+
+<header class="bg-batman text-yellow py-4">
+    <div class="container">
+        <h1 class="h3 mb-1">Контакты</h1>
+        <p class="mb-0 opacity-75">Связь с автором</p>
     </div>
-    <div class="content">
-        <div class="contacts-container">
-            <h2 class="section-title">Контакты</h2>
-            <div class="contact-info">
-                <p>Адрес электронной почты: bat@man.com</p>
-            </div>
-            <div class="contact-info">
-                <p>Адрес: г. Готэм, Бэтпещера</p>
-            </div>
-            <button class="contact-button" onclick="contactModal.showModal()">Позвоните мне</button>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house me-1"></i>Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html"><i class="bi bi-newspaper me-1"></i>Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html"><i class="bi bi-cart me-1"></i>Ништяки</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contacts.html"><i class="bi bi-telephone me-1"></i>Контакты</a></li>
+            </ul>
         </div>
     </div>
-    <div class="footer">Дно</div>    
-</div>
+</nav>
 
-<dialog id="contactModal">
-    <div class="modal-header">
+<main class="container my-5">
+    <div class="card shadow-bat p-4">
+        <div class="text-center mb-4">
+            <h2 class="text-yellow">Связаться со мной</h2>
+        </div>
+        <div class="contacts-container text-yellow text-center">
+            <div class="contact-info mb-3 p-3 bg-dark rounded shadow-bat">
+                <p><i class="bi bi-envelope-fill me-2"></i>bat@man.com</p>
+            </div>
+            <div class="contact-info mb-3 p-3 bg-dark rounded shadow-bat">
+                <p><i class="bi bi-geo-alt-fill me-2"></i>г. Готэм, Бэтпещера</p>
+            </div>
+            <button class="btn btn-primary mb-3" onclick="contactModal.showModal()">Позвоните мне</button>
+        </div>
+    </div>
+</main>
+
+<dialog id="contactModal" class="bg-dark text-yellow rounded shadow-bat p-4">
+    <div class="modal-header text-yellow mb-3">
         <h2>Форма обратной связи</h2>
     </div>
-    <div class="modal-content">
+    <div class="modal-content text-yellow">
         <form id="feedbackForm" method="dialog">
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label for="name">Имя <span class="required">*</span></label>
-                <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                <input type="text" id="name" name="name" required placeholder="Введите ваше имя" class="form-control bg-dark text-yellow border-warning">
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label for="phone">Телефон <span class="required">*</span></label>
-                <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX" class="form-control bg-dark text-yellow border-warning">
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label for="email">Электронная почта <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                <input type="email" id="email" name="email" required placeholder="example@mail.ru" class="form-control bg-dark text-yellow border-warning">
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label for="category">Категория обращения <span class="required">*</span></label>
-                <select id="category" name="category" required>
+                <select id="category" name="category" required class="form-select bg-dark text-yellow border-warning">
                     <option value="">Выберите категорию</option>
                     <option value="technical">Техническая поддержка</option>
                     <option value="commercial">Коммерческое предложение</option>
@@ -62,17 +82,23 @@
                     <option value="other">Другое</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label for="message">Текст обращения <span class="required">*</span></label>
-                <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..." class="form-control bg-dark text-yellow border-warning"></textarea>
             </div>
-            <div class="modal-actions">
-                <button type="submit" class="btn btn-secondary">Отмена</button>
+            <div class="d-flex justify-content-end gap-2">
+                <button type="button" class="btn btn-secondary" onclick="contactModal.close()">Отмена</button>
                 <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
             </div>
         </form>
     </div>
 </dialog>
+
+<footer class="bg-dark text-yellow py-4 text-center">
+    &copy; 2024 Контакты
+</footer>
+
+</div>
 
 <script>
 function submitForm() {
@@ -80,7 +106,7 @@ function submitForm() {
     if (!form.checkValidity()) { form.reportValidity(); return; }
     const data = new FormData(form);
     console.log('Данные формы:', Object.fromEntries(data.entries()));
-    alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
+    alert('Спасибо! Ваше обращение отправлено.');
     contactModal.close();
     form.reset();
 }
@@ -91,6 +117,6 @@ document.getElementById('feedbackForm').addEventListener('keypress', function(ev
     if (event.key === 'Enter' && event.target.type !== 'textarea') event.preventDefault();
 });
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
