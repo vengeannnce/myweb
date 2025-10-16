@@ -1,56 +1,76 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Контрольная работа</title>
-        <link rel="stylesheet" href="style/styles.css">
-    </head>
-    <body>
-        <div class="page-container">
-            <div class="header">Вершина</div>
-            <div class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="pages/goods.html">Ништяки</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="content">
-                <div class="profile-header">
-                    <h1 class="profile-title">Информация об авторе</h1>
-                    <img class="profile-photo" src="images/photo.png" alt="Фото автора">
-                    <h2 class="profile-name">Дудаев Азамат Альбертович</h2>
-                    <p class="profile-group">ЭФБО-16-24</p>
-                </div>
-                
-                <div class="about-me">
-                    <p>Про меня: жертва СДВГ. (возможно) гений, (не) миллиардер, (точно не) плейбой, (не) филантроп. </p>
-                </div>
-                
-                <div class="skills-container">
-                    <div class="skill-tag">Навык 1</div>
-                    <div class="skill-tag">Навык 2</div>
-                    <div class="skill-tag">Навык 3</div>
-                    <div class="skill-tag">Навык 4</div>
-                </div>
-                
-                <div class="experience-section">
-                    <h2 class="section-title">Мой опыт работы</h2>
-                    <div class="experience-card">
-                        <h3 class="experience-title">Опыт 1</h3>
-                        <p class="experience-desc">Активно изучал лор Бэтмена</p>
-                    </div>
-                    <div class="experience-card">
-                        <h3 class="experience-title">Опыт 2</h3>
-                        <p class="experience-desc">Умею различать питон(змея) и Python(ЯП)</p>
-                    </div>
-                    <div class="experience-card">
-                        <h3 class="experience-title">Опыт 3</h3>
-                        <p class="experience-desc">Опыт из майнкрафта</p>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Портфолио</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">Вершина</h1>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/goods.html">Ништяки</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <main class="page__content">
+            <section class="profile">
+                <div class="profile__card">
+                    <img class="profile__photo" src="images/photo.png" alt="Фото автора">
+                    <div class="profile__info">
+                        <h2 class="profile__name">Дудаев Азамат Альбертович</h2>
+                        <p class="profile__group">ЭФБО-16-24</p>
                     </div>
                 </div>
-            </div>
-            <div class="footer">Дно</div>    
-        </div>
-    </bdy></html>
+            </section>
+
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <div class="about__content">
+                    <p class="about__text">Про меня: жертва СДВГ. (возможно) гений, (не) миллиардер, (точно не) плейбой, (не) филантроп.</p>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class="skill skill--1"><span class="skill__name">Навык 1</span></div>
+                    <div class="skill skill--2"><span class="skill__name">Навык 2</span></div>
+                    <div class="skill skill--3"><span class="skill__name">Навык 3</span></div>
+                    <div class="skill skill--4"><span class="skill__name">Навык 4</span></div>
+                </div>
+            </section>
+
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт работы</h2>
+                <div class="experience__list">
+                    <div class="experience__card">
+                        <h3 class="experience__job">Опыт 1</h3>
+                        <p class="experience__desc">Активно изучал лор Бэтмена</p>
+                    </div>
+                    <div class="experience__card">
+                        <h3 class="experience__job">Опыт 2</h3>
+                        <p class="experience__desc">Умею различать питон(змея) и Python(ЯП)</p>
+                    </div>
+                    <div class="experience__card">
+                        <h3 class="experience__job">Опыт 3</h3>
+                        <p class="experience__desc">Опыт из майнкрафта</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">Дно</p>
+        </footer>
+    </div>
+</body>
+</html>
