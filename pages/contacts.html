@@ -1,58 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Контакты - Дудаев Азамат</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../style/styles.css">
-</head>
-<body class="bg-dark text-yellow">
-
-<div class="container-fluid p-0">
-
-<header class="bg-batman text-yellow py-4">
-    <div class="container">
-        <h1 class="h3 mb-1">Контакты</h1>
-        <p class="mb-0 opacity-75">Связь с автором</p>
-    </div>
-</header>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house me-1"></i>Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html"><i class="bi bi-newspaper me-1"></i>Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html"><i class="bi bi-cart me-1"></i>Ништяки</a></li>
-                <li class="nav-item"><a class="nav-link active" href="contacts.html"><i class="bi bi-telephone me-1"></i>Контакты</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<main class="container my-5">
-    <div class="card shadow-bat p-4">
-        <div class="text-center mb-4">
-            <h2 class="text-yellow">Связаться со мной</h2>
-        </div>
-        <div class="contacts-container text-yellow text-center">
-            <div class="contact-info mb-3 p-3 bg-dark rounded shadow-bat">
-                <p><i class="bi bi-envelope-fill me-2"></i>bat@man.com</p>
-            </div>
-            <div class="contact-info mb-3 p-3 bg-dark rounded shadow-bat">
-                <p><i class="bi bi-geo-alt-fill me-2"></i>г. Готэм, Бэтпещера</p>
-            </div>
-            <button class="btn btn-primary mb-3" onclick="contactModal.showModal()">Позвоните мне</button>
-        </div>
-    </div>
-</main>
-
-<dialog id="contactModal" class="bg-dark text-yellow rounded shadow-bat p-4">
+<dialog id="contactModal" class="bg-dark text-yellow rounded shadow-bat p-4" style="max-width:400px;">
     <div class="modal-header text-yellow mb-3">
         <h2>Форма обратной связи</h2>
     </div>
@@ -94,29 +40,19 @@
     </div>
 </dialog>
 
-<footer class="bg-dark text-yellow py-4 text-center">
-    &copy; 2024 Контакты
-</footer>
-
-</div>
-
-<script>
-function submitForm() {
-    const form = document.getElementById('feedbackForm');
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    const data = new FormData(form);
-    console.log('Данные формы:', Object.fromEntries(data.entries()));
-    alert('Спасибо! Ваше обращение отправлено.');
-    contactModal.close();
-    form.reset();
-}
-document.getElementById('contactModal').addEventListener('click', function(event) {
-    if (event.target === this) this.close();
-});
-document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter' && event.target.type !== 'textarea') event.preventDefault();
-});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<main class="container my-5">
+    <div class="card shadow-bat p-4">
+        <div class="text-center mb-4">
+            <h2 class="text-yellow">Связаться со мной</h2>
+        </div>
+        <div class="contacts-container text-center">
+            <div class="contact-info mb-3 p-3 bg-dark rounded shadow-bat text-warning">
+                <p><i class="bi bi-envelope-fill me-2"></i>bat@man.com</p>
+            </div>
+            <div class="contact-info mb-3 p-3 bg-dark rounded shadow-bat text-warning">
+                <p><i class="bi bi-geo-alt-fill me-2"></i>г. Готэм, Бэтпещера</p>
+            </div>
+            <button class="btn btn-primary mb-3" onclick="contactModal.showModal()">Позвоните мне</button>
+        </div>
+    </div>
+</main>
