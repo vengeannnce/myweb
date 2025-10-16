@@ -6,147 +6,157 @@
 <title>Портфолио - Дудаев Азамат</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<link rel="stylesheet" href="style/styles.css">
+<style>
+body {
+    background: #111;
+    color: #ffcc00;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+    background: #000;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.navbar {
+    background: #111;
+}
+.nav-link {
+    color: #ffcc00 !important;
+    font-weight: 500;
+    margin-right: 15px;
+}
+.nav-link.active {
+    text-decoration: underline;
+}
+.main-container {
+    padding: 30px 15px;
+}
+.profile-card {
+    background: #222;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.profile-card img {
+    width: 150px;
+    border-radius: 12px;
+    border: 3px solid #ffcc00;
+}
+.resume-btn {
+    background: #ffcc00;
+    color: #111;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.skills, .projects {
+    margin-bottom: 30px;
+}
+.progress {
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.progress-bar {
+    background: #ffcc00;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 5px;
+}
+.project-card {
+    background: #222;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    color: #ffcc00;
+    font-weight: 600;
+}
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+</style>
 </head>
-<body class="bg-dark">
+<body>
 
-<div class="container-fluid p-0">
-
-<header class="bg-batman text-yellow py-4">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col">
-                <h1 class="h3 mb-1 text-warning">Дудаев Азамат Альбертович</h1>
-                <p class="mb-0 opacity-75 text-warning">Студент группы ЭФБО-16-24</p>
-            </div>
-        </div>
-    </div>
+<header>
+    <div>[ЛОГОТИП]</div>
+    <div>Дудаев Азамат Альбертович</div>
 </header>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house me-1"></i>Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/news.html"><i class="bi bi-newspaper me-1"></i>Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/goods.html"><i class="bi bi-cart me-1"></i>Ништяки</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/contacts.html"><i class="bi bi-telephone me-1"></i>Контакты</a></li>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Проекты</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Дневник</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<main class="container my-4">
+<div class="container main-container">
 
-    <section class="mb-5">
-        <div class="card shadow-bat">
-            <div class="card-body p-4">
-                <div class="row align-items-center">
-                    <div class="col-md-3 text-center mb-3 mb-md-0">
-                        <img src="images/photo.png" alt="Фото автора" class="img-fluid rounded-circle batman-img">
-                    </div>
-                    <div class="col-md-9">
-                        <h2 class="card-title h4 text-warning">Дудаев Азамат Альбертович</h2>
-                        <p class="card-text text-warning mb-2"><i class="bi bi-bookmark-check-fill text-yellow"></i> Студент группы ЭФБО-16-24</p>
-                        <p class="card-text text-warning">Факультет информационных технологий, специальность "Веб-разработка"</p>
-                    </div>
-                </div>
+    <!-- Профиль -->
+    <div class="profile-card">
+        <img src="images/photo.png" alt="Фото студента">
+        <div>
+            <p>Привет! Я студент группы ЭФБО-16-24</p>
+            <p>Увлекаюсь веб-разработкой</p>
+            <button class="resume-btn">Скачать резюме</button>
+        </div>
+    </div>
+
+    <!-- Навыки -->
+    <div class="skills">
+        <h3>Мои навыки</h3>
+        <div>HTML/CSS
+            <div class="progress"><div class="progress-bar" style="width:90%">90%</div></div>
+        </div>
+        <div>JavaScript
+            <div class="progress"><div class="progress-bar" style="width:80%">80%</div></div>
+        </div>
+        <div>Bootstrap
+            <div class="progress"><div class="progress-bar" style="width:85%">85%</div></div>
+        </div>
+        <div>React
+            <div class="progress"><div class="progress-bar" style="width:60%">60%</div></div>
+        </div>
+    </div>
+
+    <!-- Проекты -->
+    <div class="projects">
+        <h3>Лучшие проекты</h3>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="project-card">П1</div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">П2</div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">П3</div>
             </div>
         </div>
-    </section>
-
-    <section class="mb-5">
-        <div class="card shadow-bat">
-            <div class="card-header bg-dark text-yellow">
-                <h3 class="card-title h5 mb-0"><i class="bi bi-person-circle"></i> Обо мне</h3>
-            </div>
-            <div class="card-body text-yellow">
-                <p>Про меня: жертва СДВГ. (возможно) гений, (не) миллиардер, (точно не) плейбой, (не) филантроп.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-5">
-        <div class="card shadow-bat">
-            <div class="card-header bg-dark text-yellow">
-                <h3 class="card-title h5 mb-0"><i class="bi bi-tools"></i> Мои навыки</h3>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1 text-warning">
-                                <span>HTML/CSS</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar bg-warning" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1 text-warning">
-                                <span>JavaScript</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar bg-warning" style="width: 75%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1 text-warning">
-                                <span>Python</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar bg-warning" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1 text-warning">
-                                <span>React</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar bg-warning" style="width: 70%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-5">
-        <div class="card shadow-bat">
-            <div class="card-header bg-dark text-yellow">
-                <h3 class="card-title h5 mb-0"><i class="bi bi-trophy"></i> Мои достижения</h3>
-            </div>
-            <div class="card-body">
-                <div class="row align-items-center">
-                    <div class="col-md-3 text-center mb-3 mb-md-0">
-                        <img src="images/python.png" alt="Python" class="img-fluid batman-img" style="width: 100px; height: 100px;">
-                    </div>
-                    <div class="col-md-9 text-warning">
-                        <h4>Python</h4>
-                        <p>Активное прохождение ЯП Python, окончен курс для начинающих.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer class="bg-dark text-yellow py-4 mt-5 text-center">
-    &copy; 2024 Контрольная работа
-</footer>
+    </div>
 
 </div>
+
+<footer>
+    &copy; 2025 Контакты
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
