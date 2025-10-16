@@ -1,56 +1,84 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Контрольная работа</title>
-        <link rel="stylesheet" href="style/styles.css">
-    </head>
-    <body>
-        <div class="page-container">
-            <div class="header">Вершина</div>
-            <div class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="pages/goods.html">Ништяки</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контрольная работа - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container-fluid p-0">
+
+    <header class="bg-primary text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="h3 mb-1">Дудаев Азамат Альбертович</h1>
+                <p class="mb-0 opacity-75">ЭФБО-16-24</p>
+            </div>
+            <img src="images/photo.png" class="rounded-circle" alt="Фото автора" style="width:100px; height:100px; object-fit:cover;">
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house me-1"></i>Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/news.html"><i class="bi bi-newspaper me-1"></i>Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/goods.html"><i class="bi bi-cart me-1"></i>Ништяки</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contacts.html"><i class="bi bi-telephone me-1"></i>Контакты</a></li>
                 </ul>
             </div>
-            <div class="content">
-                <div class="profile-header">
-                    <h1 class="profile-title">Информация об авторе</h1>
-                    <img class="profile-photo" src="images/photo.png" alt="Фото автора">
-                    <h2 class="profile-name">Дудаев Азамат Альбертович</h2>
-                    <p class="profile-group">ЭФБО-16-24</p>
-                </div>
-                
-                <div class="about-me">
-                    <p>Про меня: жертва СДВГ. (возможно) гений, (не) миллиардер, (точно не) плейбой, (не) филантроп. </p>
-                </div>
-                
-                <div class="skills-container">
-                    <div class="skill-tag">Навык 1</div>
-                    <div class="skill-tag">Навык 2</div>
-                    <div class="skill-tag">Навык 3</div>
-                    <div class="skill-tag">Навык 4</div>
-                </div>
-                
-                <div class="experience-section">
-                    <h2 class="section-title">Мой опыт работы</h2>
-                    <div class="experience-card">
-                        <h3 class="experience-title">Опыт 1</h3>
-                        <p class="experience-desc">Активно изучал лор Бэтмена</p>
-                    </div>
-                    <div class="experience-card">
-                        <h3 class="experience-title">Опыт 2</h3>
-                        <p class="experience-desc">Умею различать питон(змея) и Python(ЯП)</p>
-                    </div>
-                    <div class="experience-card">
-                        <h3 class="experience-title">Опыт 3</h3>
-                        <p class="experience-desc">Опыт из майнкрафта</p>
-                    </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+
+        <section class="mb-5">
+            <div class="card shadow-sm p-4">
+                <h2 class="h4 text-primary">Информация об авторе</h2>
+                <p>Про меня: жертва СДВГ. (возможно) гений, (не) миллиардер, (точно не) плейбой, (не) филантроп.</p>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="card shadow-sm p-4">
+                <h2 class="h5 text-primary mb-3">Мои навыки</h2>
+                <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge bg-primary">Навык 1</span>
+                    <span class="badge bg-secondary">Навык 2</span>
+                    <span class="badge bg-success">Навык 3</span>
+                    <span class="badge bg-warning text-dark">Навык 4</span>
                 </div>
             </div>
-            <div class="footer">Дно</div>    
+        </section>
+
+        <section class="mb-5">
+            <div class="card shadow-sm p-4">
+                <h2 class="h5 text-primary mb-3">Мой опыт работы</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Опыт 1:</strong> Активно изучал лор Бэтмена</li>
+                    <li class="list-group-item"><strong>Опыт 2:</strong> Умею различать питон(змея) и Python(ЯП)</li>
+                    <li class="list-group-item"><strong>Опыт 3:</strong> Опыт из майнкрафта</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            &copy; 2025 Азамат Дудаев. Все права защищены.
         </div>
-    </bdy></html>
+    </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
