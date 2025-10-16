@@ -8,17 +8,30 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <style>
 body {
-    background-color: #f8f9fa;
-    color: #111;
+    background-color: #1c1c1c;
+    color: #ffdd57;
 }
 .card-header {
-    background-color: #e9ecef;
+    background-color: #2c2c2c;
+}
+.card {
+    background-color: #2c2c2c;
+    color: #ffdd57;
 }
 .progress {
     height: 8px;
 }
-.card-img-top {
-    object-fit: cover;
+.progress-bar {
+    transition: width 1s;
+}
+.badge {
+    font-weight: 500;
+}
+.text-muted {
+    color: #ffdd57 !important;
+}
+a.nav-link.active {
+    color: #ffdd57 !important;
 }
 </style>
 </head>
@@ -27,14 +40,14 @@ body {
 <div class="container-fluid p-0">
 
 <!-- Header -->
-<header class="bg-primary text-white py-4">
+<header class="bg-dark text-yellow py-4">
     <div class="container d-flex justify-content-between align-items-center">
         <div>
-            <h1 class="h3 mb-1">Дудаев Азамат</h1>
-            <p class="mb-0 opacity-75">Студент разработчик</p>
+            <h1 class="h3 mb-1 text-warning">Дудаев Азамат</h1>
+            <p class="mb-0 opacity-75 text-warning">Студент группы ЭФБО-16-24</p>
         </div>
         <div>
-            <span class="badge bg-light text-primary">ЭФБО-16-24</span>
+            <span class="badge bg-warning text-dark">ЭФБО-16-24</span>
         </div>
     </div>
 </header>
@@ -61,19 +74,19 @@ body {
 
     <!-- Profile Section -->
     <section class="mb-5">
-        <div class="card shadow-sm">
+        <div class="card shadow-bat">
             <div class="card-body p-4 d-flex flex-wrap align-items-center">
                 <div class="me-4 mb-3">
                     <img src="images/photo.png" alt="Фото студента" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
                 </div>
                 <div>
-                    <h2 class="card-title h4">Дудаев Азамат Альбертович</h2>
-                    <p class="mb-1"><i class="bi bi-bookmark-check-fill"></i> Студент группы ЭФБО-16-24</p>
-                    <p>Факультет информационных технологий, специальность "Веб-разработка"</p>
+                    <h2 class="card-title h4 text-warning">Дудаев Азамат Альбертович</h2>
+                    <p class="mb-1"><i class="bi bi-bookmark-check-fill text-warning"></i> Студент группы ЭФБО-16-24</p>
+                    <p>Факультет информационных технологий, специальность Фуллстек разработка</p>
                     <div class="d-flex gap-2 flex-wrap mt-2">
-                        <span class="badge bg-primary">HTML/CSS</span>
-                        <span class="badge bg-success">JavaScript</span>
-                        <span class="badge bg-info">Bootstrap</span>
+                        <span class="badge bg-warning text-dark">HTML/CSS</span>
+                        <span class="badge bg-warning text-dark">JavaScript</span>
+                        <span class="badge bg-warning text-dark">Bootstrap</span>
                         <span class="badge bg-warning text-dark">React</span>
                     </div>
                 </div>
@@ -83,58 +96,57 @@ body {
 
     <!-- About Section -->
     <section class="mb-5">
-        <div class="card shadow-sm">
+        <div class="card shadow-bat">
             <div class="card-header">
-                <h3 class="card-title h5 mb-0"><i class="bi bi-person-circle text-primary"></i> Обо мне</h3>
+                <h3 class="card-title h5 mb-0"><i class="bi bi-person-circle text-warning"></i> Обо мне</h3>
             </div>
             <div class="card-body">
-                <p>Я увлекаюсь веб-разработкой и изучаю современные технологии. В свободное время занимаюсь созданием пет-проектов и изучаю новые фреймворки.</p>
-                <p>Мои основные интересы: фронтенд разработка, UX/UI дизайн и мобильная разработка. Стремлюсь к созданию качественных и удобных пользовательских интерфейсов.</p>
+                <p>Я увлекаюсь современными технологиями и изучаю их. В свободное время углубляю свои знания в Python для дальнейшиъ разработок пет проектов и стажировок.</p>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section class="mb-5">
-        <div class="card shadow-sm">
+        <div class="card shadow-bat">
             <div class="card-header">
-                <h3 class="card-title h5 mb-0"><i class="bi bi-tools text-primary"></i> Мои навыки</h3>
+                <h3 class="card-title h5 mb-0"><i class="bi bi-tools text-warning"></i> Мои навыки</h3>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-1">
-                                <span>HTML/CSS</span><span class="text-primary">90%</span>
+                                <span>HTML/CSS</span><span class="text-warning">90%</span>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar bg-primary" style="width: 90%"></div>
+                                <div class="progress-bar bg-warning" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-1">
-                                <span>JavaScript</span><span class="text-success">75%</span>
+                                <span>JavaScript</span><span class="text-warning">75%</span>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar bg-success" style="width: 75%"></div>
+                                <div class="progress-bar bg-warning" style="width: 75%"></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-1">
-                                <span>Bootstrap</span><span class="text-info">85%</span>
+                                <span>Bootstrap</span><span class="text-warning">85%</span>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar bg-info" style="width: 85%"></div>
+                                <div class="progress-bar bg-warning" style="width: 85%"></div>
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-1">
-                                <span>React</span><span class="text-warning">70%</span>
+                                <span>Python</span><span class="text-warning">70%</span>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar bg-warning text-dark" style="width: 70%"></div>
+                                <div class="progress-bar bg-warning" style="width: 70%"></div>
                             </div>
                         </div>
                     </div>
@@ -145,49 +157,36 @@ body {
 
     <!-- Projects Section -->
     <section class="mb-5">
-        <div class="card shadow-sm">
+        <div class="card shadow-bat">
             <div class="card-header">
-                <h3 class="card-title h5 mb-0"><i class="bi bi-folder-fill text-primary"></i> Мои проекты</h3>
+                <h3 class="card-title h5 mb-0"><i class="bi bi-folder-fill text-warning"></i> Лучшие проекты</h3>
             </div>
             <div class="card-body">
                 <div class="row g-3">
                     <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="images/project1.jpg" class="card-img-top" alt="Личный сайт" style="height:150px;">
+                        <div class="card h-100 bg-dark text-warning">
+                            <img src="images/project1.jpg" class="card-img-top" alt="Проект 1" style="height:150px;">
                             <div class="card-body">
-                                <h5 class="card-title">Личный сайт</h5>
-                                <p class="card-text small text-muted">Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.</p>
-                                <div class="mb-2">
-                                    <span class="badge bg-primary">HTML</span>
-                                    <span class="badge bg-primary">CSS</span>
-                                    <span class="badge bg-info">Bootstrap</span>
-                                </div>
+                                <h5 class="card-title">П1</h5>
+                                <p class="card-text small text-warning">Описание проекта 1</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="images/project2.jpg" class="card-img-top" alt="Todo приложение" style="height:150px;">
+                        <div class="card h-100 bg-dark text-warning">
+                            <img src="images/project2.jpg" class="card-img-top" alt="Проект 2" style="height:150px;">
                             <div class="card-body">
-                                <h5 class="card-title">Todo приложение</h5>
-                                <p class="card-text small text-muted">Приложение для управления задачами с использованием JavaScript.</p>
-                                <div class="mb-2">
-                                    <span class="badge bg-success">JavaScript</span>
-                                    <span class="badge bg-success">LocalStorage</span>
-                                </div>
+                                <h5 class="card-title">П2</h5>
+                                <p class="card-text small text-warning">Описание проекта 2</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="images/project3.jpg" class="card-img-top" alt="Интернет-магазин" style="height:150px;">
+                        <div class="card h-100 bg-dark text-warning">
+                            <img src="images/project3.jpg" class="card-img-top" alt="Проект 3" style="height:150px;">
                             <div class="card-body">
-                                <h5 class="card-title">Интернет-магазин</h5>
-                                <p class="card-text small text-muted">Прототип интернет-магазина с корзиной товаров и фильтрацией.</p>
-                                <div class="mb-2">
-                                    <span class="badge bg-info">React</span>
-                                    <span class="badge bg-info">API</span>
-                                </div>
+                                <h5 class="card-title">П3</h5>
+                                <p class="card-text small text-warning">Описание проекта 3</p>
                             </div>
                         </div>
                     </div>
@@ -199,12 +198,12 @@ body {
 </main>
 
 <!-- Footer -->
-<footer class="bg-dark text-white py-4 mt-5">
+<footer class="bg-dark text-warning py-4 mt-5">
     <div class="container d-flex justify-content-between">
-        <p class="mb-0">&copy; 2025 Портфолио студента. Все права защищены.</p>
+        <p class="mb-0">&copy; 2025 Контакты</p>
         <div>
-            <a href="pages/contacts.html" class="text-white me-3">Контакты</a>
-            <a href="#" class="text-white">Политика конфиденциальности</a>
+            <a href="pages/contacts.html" class="text-warning me-3">Контакты</a>
+            <a href="#" class="text-warning">Политика конфиденциальности</a>
         </div>
     </div>
 </footer>
