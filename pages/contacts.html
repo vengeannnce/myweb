@@ -6,28 +6,71 @@
 <title>Контакты - Дудаев Азамат</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../style/styles.css">
+<style>
+body {
+    background-color: #1c1c1c;
+    color: #ffdd57;
+}
+.card {
+    background-color: #2c2c2c;
+    color: #ffdd57;
+}
+.card-header {
+    background-color: #2c2c2c;
+}
+.text-warning {
+    color: #ffdd57 !important;
+}
+.btn-primary {
+    background-color: #ffdd57;
+    color: #1c1c1c;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #e6c44d;
+    color: #1c1c1c;
+}
+.shadow-bat {
+    box-shadow: 0 0 15px rgba(255, 221, 87, 0.4);
+}
+.form-control, .form-select {
+    background-color: #2c2c2c;
+    color: #ffdd57;
+    border: 1px solid #ffdd57;
+}
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 5px #ffdd57;
+    border-color: #ffdd57;
+}
+a.nav-link.active {
+    color: #ffdd57 !important;
+}
+</style>
 </head>
-<body class="bg-dark text-yellow">
+<body>
 
 <div class="container-fluid p-0">
 
-<header class="bg-batman text-yellow py-4">
-    <div class="container">
-        <h1 class="h3 mb-1">Контакты</h1>
-        <p class="mb-0 opacity-75">Связь с автором</p>
+<!-- Header -->
+<header class="bg-dark text-warning py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <h1 class="h3 mb-1 text-warning">Контакты</h1>
+            <p class="mb-0 opacity-75 text-warning">Связь с автором</p>
+        </div>
     </div>
 </header>
 
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house me-1"></i>Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-folder me-1"></i>Проекты</a></li> 
+                <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-folder me-1"></i>Проекты</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html"><i class="bi bi-newspaper me-1"></i>Новости</a></li>
                 <li class="nav-item"><a class="nav-link" href="diary.html"><i class="bi bi-journal-text me-1"></i>Дневник</a></li>
                 <li class="nav-item"><a class="nav-link" href="goods.html"><i class="bi bi-cart me-1"></i>Ништяки</a></li>
@@ -37,15 +80,16 @@
     </div>
 </nav>
 
+<!-- Main Content -->
 <main class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card bg-dark shadow-bat p-4 text-center">
-                <h2 class="text-yellow mb-4">Связаться со мной</h2>
-                <div class="mb-3 p-3 bg-dark rounded shadow-bat text-warning">
+            <div class="card shadow-bat p-4 text-center">
+                <h2 class="card-title h4 text-warning mb-4">Связаться со мной</h2>
+                <div class="mb-3 p-3 rounded shadow-bat">
                     <p><i class="bi bi-envelope-fill me-2"></i>bat@man.com</p>
                 </div>
-                <div class="mb-3 p-3 bg-dark rounded shadow-bat text-warning">
+                <div class="mb-3 p-3 rounded shadow-bat">
                     <p><i class="bi bi-geo-alt-fill me-2"></i>г. Готэм, Бэтпещера</p>
                 </div>
                 <button class="btn btn-primary" onclick="contactModal.showModal()">Открыть форму связи</button>
@@ -54,53 +98,57 @@
     </div>
 </main>
 
-<dialog id="contactModal" class="bg-dark text-yellow rounded shadow-bat p-4" style="max-width:400px;">
-    <div class="modal-header text-yellow mb-3">
-        <h2>Форма обратной связи</h2>
+<!-- Modal / Dialog -->
+<dialog id="contactModal" class="bg-dark text-warning rounded shadow-bat p-4" style="max-width:400px;">
+    <div class="card-header mb-3">
+        <h5 class="card-title mb-0">Форма обратной связи</h5>
     </div>
-    <div class="modal-content text-yellow">
-        <form id="feedbackForm" method="dialog">
-            <div class="form-group mb-3">
-                <label for="name">Имя <span class="required">*</span></label>
-                <input type="text" id="name" name="name" required placeholder="Введите ваше имя" class="form-control bg-dark text-yellow border-warning">
-            </div>
-            <div class="form-group mb-3">
-                <label for="phone">Телефон <span class="required">*</span></label>
-                <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX" class="form-control bg-dark text-yellow border-warning">
-            </div>
-            <div class="form-group mb-3">
-                <label for="email">Электронная почта <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required placeholder="example@mail.ru" class="form-control bg-dark text-yellow border-warning">
-            </div>
-            <div class="form-group mb-3">
-                <label for="category">Категория обращения <span class="required">*</span></label>
-                <select id="category" name="category" required class="form-select bg-dark text-yellow border-warning">
-                    <option value="">Выберите категорию</option>
-                    <option value="technical">Техническая поддержка</option>
-                    <option value="commercial">Коммерческое предложение</option>
-                    <option value="cooperation">Сотрудничество</option>
-                    <option value="complaint">Жалоба</option>
-                    <option value="suggestion">Предложение</option>
-                    <option value="other">Другое</option>
-                </select>
-            </div>
-            <div class="form-group mb-3">
-                <label for="message">Текст обращения <span class="required">*</span></label>
-                <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..." class="form-control bg-dark text-yellow border-warning"></textarea>
-            </div>
-            <div class="d-flex justify-content-end gap-2">
-                <button type="button" class="btn btn-secondary" onclick="contactModal.close()">Отмена</button>
-                <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
-            </div>
-        </form>
-    </div>
+    <form id="feedbackForm" method="dialog">
+        <div class="mb-3">
+            <label for="name" class="form-label">Имя <span class="text-warning">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Введите ваше имя" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Телефон <span class="text-warning">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Электронная почта <span class="text-warning">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="example@mail.ru" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Категория обращения <span class="text-warning">*</span></label>
+            <select id="category" name="category" required class="form-select">
+                <option value="">Выберите категорию</option>
+                <option value="technical">Техническая поддержка</option>
+                <option value="commercial">Коммерческое предложение</option>
+                <option value="cooperation">Сотрудничество</option>
+                <option value="complaint">Жалоба</option>
+                <option value="suggestion">Предложение</option>
+                <option value="other">Другое</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Текст обращения <span class="text-warning">*</span></label>
+            <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..." class="form-control"></textarea>
+        </div>
+        <div class="d-flex justify-content-end gap-2">
+            <button type="button" class="btn btn-secondary" onclick="contactModal.close()">Отмена</button>
+            <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+        </div>
+    </form>
 </dialog>
 
-<footer class="bg-dark text-yellow py-4 text-center">
-    &copy; 2024 Контакты
+<!-- Footer -->
+<footer class="bg-dark text-warning py-4 mt-5">
+    <div class="container d-flex justify-content-between">
+        <p class="mb-0">&copy; 2025 Контакты</p>
+        <div>
+            <a href="contacts.html" class="text-warning me-3">Контакты</a>
+            <a href="#" class="text-warning">Политика конфиденциальности</a>
+        </div>
+    </div>
 </footer>
-
-</div>
 
 <script>
 function submitForm() {
@@ -119,6 +167,7 @@ document.getElementById('feedbackForm').addEventListener('keypress', function(ev
     if (event.key === 'Enter' && event.target.type !== 'textarea') event.preventDefault();
 });
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
