@@ -6,16 +6,23 @@
 <title>Ништяки - Дудаев Азамат</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../style/styles.css">
+<style>
+body { background-color: #1c1c1c; color: #ffdd57; }
+.card { background-color: #2c2c2c; color: #ffdd57; }
+.shadow-bat { box-shadow: 0 0 15px rgba(255, 221, 87, 0.4); }
+.card-img-top { object-fit: cover; border-radius: 0.5rem; }
+a.nav-link.active { color: #ffdd57 !important; }
+</style>
 </head>
-<body class="bg-dark text-yellow">
-
+<body>
 <div class="container-fluid p-0">
 
-<header class="bg-batman text-yellow py-4">
-    <div class="container">
-        <h1 class="h3 mb-1">Ништяки</h1>
-        <p class="mb-0 opacity-75">Доступные товары</p>
+<header class="bg-dark text-warning py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <h1 class="h3 mb-1 text-warning">Ништяки</h1>
+            <p class="mb-0 opacity-75 text-warning">Доступные товары</p>
+        </div>
     </div>
 </header>
 
@@ -25,11 +32,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house me-1"></i>Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-folder me-1"></i>Проекты</a></li> 
+                <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-folder me-1"></i>Проекты</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html"><i class="bi bi-newspaper me-1"></i>Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="diary.html"><i class="bi bi-journal-text me-1"></i>Дневник</a></li> 
+                <li class="nav-item"><a class="nav-link" href="diary.html"><i class="bi bi-journal-text me-1"></i>Дневник</a></li>
                 <li class="nav-item"><a class="nav-link active" href="goods.html"><i class="bi bi-cart me-1"></i>Ништяки</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html"><i class="bi bi-telephone me-1"></i>Контакты</a></li>
             </ul>
@@ -41,22 +48,22 @@
     <h2 class="text-center text-yellow mb-4">Доступные ништяки</h2>
     <div class="row g-4">
         <div class="col-md-4">
-            <div class="card bg-dark text-yellow shadow-bat h-100 text-center p-3">
-                <img src="../images/goods1.jpg" class="card-img-top rounded shadow-bat mb-3" alt="Карманный ништяк" style="height: 250px; object-fit: cover;">
+            <div class="card shadow-bat h-100 text-center p-3">
+                <img src="../images/goods1.jpg" class="card-img-top mb-3" alt="Карманный ништяк" style="height: 250px;">
                 <h5 class="card-title">Карманный ништяк</h5>
                 <p class="card-text text-warning fs-5">5 000 ₽</p>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card bg-dark text-yellow shadow-bat h-100 text-center p-3">
-                <img src="../images/goods2.jpg" class="card-img-top rounded shadow-bat mb-3" alt="Ништяк на районе" style="height: 250px; object-fit: cover;">
+            <div class="card shadow-bat h-100 text-center p-3">
+                <img src="../images/goods2.jpg" class="card-img-top mb-3" alt="Ништяк на районе" style="height: 250px;">
                 <h5 class="card-title">Ништяк, чтобы на районе красоваться</h5>
                 <p class="card-text text-warning fs-5">35 000 $</p>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card bg-dark text-yellow shadow-bat h-100 text-center p-3">
-                <img src="../images/goods3.jpg" class="card-img-top rounded shadow-bat mb-3" alt="Ништяк по городу" style="height: 250px; object-fit: cover;">
+            <div class="card shadow-bat h-100 text-center p-3">
+                <img src="../images/goods3.jpg" class="card-img-top mb-3" alt="Ништяк по городу" style="height: 250px;">
                 <h5 class="card-title">Ништяк, чтобы по городу хасанить</h5>
                 <p class="card-text text-warning fs-5">1 500 000 $</p>
             </div>
@@ -64,12 +71,11 @@
     </div>
 </main>
 
-<footer class="bg-dark text-yellow py-4 text-center">
-    &copy; 2024 Ништяки
+<footer class="bg-dark text-warning py-4 text-center">
+    &copy; 2025 Ништяки
 </footer>
 
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
